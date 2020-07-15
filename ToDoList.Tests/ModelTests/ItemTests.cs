@@ -10,7 +10,7 @@ namespace ToDoList.Tests
   {
     public void Dispose()
     {
-      // Item.ClearAll();
+      Item.ClearAll();
     }
     [TestMethod]
     public void ItemConstructor_CreatesInstanceOfItem_Item()

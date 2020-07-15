@@ -2,12 +2,12 @@
 
 #### _An experiment into red green refactoring with C sharp, 2020 ver 1.0.0_
 
-#### By _Ian Gregg & Kyle Hubbard_
-[To-Do-List-C-Sharp]()
+#### By _Ian Gregg , Kyle Hubbard & Megan Hepner_
+[To-Do-List-C-Sharp](https://github.com/oldgregg89/To-Do-List-C-charp)
 
 ## Description
 
-_This application is utilizing the C sharp programming language to understand the test driven enviorment through red green Refactoring with Palindromes. A palindrome is any word, phrase, number, or other sequence of characters that reads the same both backward or forward._
+_This application is utilizing the C sharp programming language to understand the test driven enviorment through red green Refactoring with Palindromes. For creating a to do list._
 
 ## Setup/Installation Requirements
 
@@ -36,7 +36,9 @@ _No known bugs_
 
 _Contact Ian Gregg: <iangregg188@gmail.com>
 or
-Kyle Hubbard <kyle.james.hubbard@gmail.com>_
+Kyle Hubbard <kyle.james.hubbard@gmail.com>
+or
+Megan Hepner <megan.hepner@gmail.com>_
 
 ## Technologies Used
 
@@ -44,7 +46,7 @@ _The Technologies used in the making of this software was Chrome browser, Visual
 
 ### License
 
-Copyright (c) 2020 **_Ian Gregg & Kyle Hubbard_**
+Copyright (c) 2020 **_Ian Gregg & Kyle Hubbard & Megan Hepner_**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.

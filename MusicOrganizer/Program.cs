@@ -10,6 +10,7 @@ namespace MusicOrganizer
       var host = new WebHostBuilder()
         .UseKestrel()
         .UseContentRoot(Directory.GetCurrentDirectory())
+        .UseWebRoot("wwwroot")
         .UseIISIntegration()
         .UseStartup<Startup>()
         .Build();

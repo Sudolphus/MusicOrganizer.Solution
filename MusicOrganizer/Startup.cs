@@ -26,7 +26,6 @@ namespace MusicOrganizer
     public void Configure(IApplicationBuilder app)
     {
       app.UseDeveloperExceptionPage();
-      app.UseStaticFiles();
 
       app.UseMvc(routes =>
       {
@@ -35,10 +34,12 @@ namespace MusicOrganizer
           template: "{controller=Home}/{action=Index}/{id?}");
       });
 
-        app.Run(async (context) =>
-        {
-          await context.Response.WriteAsync("Something went wrong!");
-        });
+      app.UseStaticFiles();
+
+      app.Run(async (context) =>
+      {
+        await context.Response.WriteAsync("Something went wrong!");
+      });
 
     }
   }

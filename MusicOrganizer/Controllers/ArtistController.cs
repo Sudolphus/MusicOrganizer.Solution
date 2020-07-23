@@ -13,7 +13,7 @@ namespace MusicOrganizer.Controllers
       return View(artistList);
     }
 
-    [HttpGet("/artist/{id}")]
+    [HttpGet("/artists/{id}")]
     public ActionResult Show(int id)
     {
       Artist foundArtist = Artist.FindArtist(id);

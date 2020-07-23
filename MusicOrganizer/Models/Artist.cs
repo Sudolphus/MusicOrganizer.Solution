@@ -64,5 +64,16 @@ namespace MusicOrganizer.Models
     {
       return _idDictionary[id];
     }
+
+    public static Artist FindArtistByName(string artistName)
+    {
+      for (int i = 0; i < _artistList.Count; i++)
+      {
+        if (artistName == _artistList[i].ArtistName) {
+          return _artistList[i];
+        }
+      }
+      return null;
+    }
   }
 }

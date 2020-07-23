@@ -1,0 +1,17 @@
+@using MusicOrganizer.Models;
+
+@{
+  Layout = "_Layout";
+}
+
+<div class="page-header">
+  <h1>@Model.ArtistName</h1>
+  <p>A List Of Their Albums In Your Collection</p>
+</div>
+
+<ul>
+  @foreach(Album album in Model.GetAlbums())
+  {
+    <li>@album.AlbumName</li>
+  }
+</ul>

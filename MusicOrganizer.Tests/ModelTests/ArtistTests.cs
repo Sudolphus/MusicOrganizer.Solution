@@ -66,5 +66,14 @@ namespace MusicOrganizer.Tests
       Artist newArtist = new Artist("Paul Simon");
       Assert.AreEqual(0, newArtist.Id);
     }
+
+    [TestMethod]
+    public void FindArtist_ReturnsArtistObjectFromId_Artist()
+    {
+      Artist newArtist = new Artist("The Pixies");
+      string testString = "The Pixies";
+      Assert.AreEqual(typeof(Artist), Artist.FindArtist(0));
+      Assert.AreEqual(testString, Artist.FindArtist(0).ArtistName);
+    }
   }
 }

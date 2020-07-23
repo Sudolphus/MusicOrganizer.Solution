@@ -11,6 +11,7 @@ namespace MusicOrganizer.Tests
     public void Dispose()
     {
       Album.ClearAll();
+      Album.ClearCurrentId();
     }
 
     [TestMethod]

@@ -36,6 +36,14 @@ namespace MusicOrganizer.Controllers
       Album album = Album.FindAlbum(id);
       return View(album);
     }
+
+    [HttpPost("albums/{id}")]
+    public ActionResult Delete(int id)
+    {
+      Album album = Album.FindAlbum(id);
+      Album.DeleteAlbum(album);
+      return RedirectToAction("Index");
+    }
   }
 }
 

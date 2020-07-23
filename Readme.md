@@ -24,7 +24,12 @@ __
 
 | Behavior    | Input | Output |
 | :---------- | ----- | -----: |
-
+| Program will create an album object | none | none |
+| Album object holds artist name and album name | none | none |
+| Program can retrieve a list of all albums | none | list |
+| Program can retrieve a list of all artists | none | list |
+| For each artist, program can retrieve a list of albums by that artist | none | none |
+| Program can delete an album | none | destroy |
 
 
 ## Known Bugs
@@ -41,7 +46,7 @@ _The Technologies used in the making of this software was Chrome browser, Visual
 
 ### License
 
-Copyright (c) 2020 **_Peter Grimm & Michael Hansen & Megan Hepner_**
+Copyright (c) 2020 **_Peter Grimm & Micheal Hansen & Megan Hepner_**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.

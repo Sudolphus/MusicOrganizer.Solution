@@ -49,11 +49,10 @@ namespace MusicOrganizer.Tests
     [TestMethod]
     public void FindAlbum_ReturnsAlbumObjectFromId_Album()
     {
-      Artist newArtist = new Artist("The Pixies");
-      string testString = "The Pixies";
-      Assert.AreEqual(typeof(Artist), Artist.FindArtist(0).GetType());
-      Assert.AreEqual(testString, Artist.FindArtist(0).ArtistName);
+      Album newAlbum = new Album("Doolittle", "The Pixies");
+      string testString = "Doolittle";
+      Assert.AreEqual(typeof(Album), Album.FindAlbum(0).GetType());
+      Assert.AreEqual(testString, Artist.FindAlbum(0).AlbumName);
     }
-  }
   }
 }

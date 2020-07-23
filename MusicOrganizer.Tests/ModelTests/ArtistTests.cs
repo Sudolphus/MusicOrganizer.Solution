@@ -12,6 +12,7 @@ namespace MusicOrganizer.Tests
     {
       Artist.ClearAll();
       Artist.ClearCurrentId();
+      Artist.ClearDictionary();
     }
 
     [TestMethod]
@@ -72,7 +73,7 @@ namespace MusicOrganizer.Tests
     {
       Artist newArtist = new Artist("The Pixies");
       string testString = "The Pixies";
-      Assert.AreEqual(typeof(Artist), Artist.FindArtist(0));
+      Assert.AreEqual(typeof(Artist), Artist.FindArtist(0).GetType());
       Assert.AreEqual(testString, Artist.FindArtist(0).ArtistName);
     }
   }

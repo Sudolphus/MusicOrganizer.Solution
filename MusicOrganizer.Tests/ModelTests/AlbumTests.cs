@@ -45,5 +45,15 @@ namespace MusicOrganizer.Tests
       Album newAlbum = new Album("Disintegration", "The Cure");
       Assert.AreEqual(0, newAlbum.Id);
     }
+
+    [TestMethod]
+    public void FindAlbum_ReturnsAlbumObjectFromId_Album()
+    {
+      Artist newArtist = new Artist("The Pixies");
+      string testString = "The Pixies";
+      Assert.AreEqual(typeof(Artist), Artist.FindArtist(0).GetType());
+      Assert.AreEqual(testString, Artist.FindArtist(0).ArtistName);
+    }
+  }
   }
 }

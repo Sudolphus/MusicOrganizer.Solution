@@ -50,5 +50,13 @@ namespace MusicOrganizer.Tests
       newArtist.DeleteAlbum(newAlbum);
       CollectionAssert.DoesNotContain(newArtist.GetAlbums(), newAlbum);
     }
+
+    [TestMethod]
+    public void DeleteArtist_RemoveAnEntireArtist_DoesNotContain()
+    {
+      Artist newArtist = new Artist("Paul Simon");
+      Artist.DeleteArtist(newArtist);
+      CollectionAssert.DoesNotContain(Artist.GetAll(), newArtist);
+    }
   }
 }

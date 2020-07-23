@@ -38,5 +38,10 @@ namespace MusicOrganizer.Models
     {
       _albumList.Remove(albumName);
     }
+
+    public static void DeleteArtist(Artist artistName)
+    {
+      _artistList.Remove(artistName);
+    }
   }
 }

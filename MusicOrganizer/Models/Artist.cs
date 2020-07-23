@@ -5,10 +5,22 @@ namespace MusicOrganizer.Models
   public class Artist
   {
     public string ArtistName { get; set; }
+    private static List<Artist> _artistList = new List<Artist>();
 
     public Artist(string artistName)
     {
       ArtistName = artistName;
+      _artistList.Add(this);
+    }
+
+    public static List<Artist> GetAll()
+    {
+      return _artistList;
+    }
+
+    public static void ClearAll()
+    {
+      _artistList.Clear();
     }
   }
 }

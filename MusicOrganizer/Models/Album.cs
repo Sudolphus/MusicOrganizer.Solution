@@ -9,6 +9,7 @@ namespace MusicOrganizer.Models
     private static List<Album> _albumList = new List<Album>();
     public int Id { get; }
     private static int _currentId = 0;
+    private static Dictionary<int, Album> _idDictionary = new Dictionary<int, Album>();
 
     public Album (string albumName, string artistName)
     {
@@ -17,6 +18,7 @@ namespace MusicOrganizer.Models
       _albumList.Add(this);
       Id = _currentId;
       _currentId ++;
+      _idDictionary.Add(Id, this);
     }
 
     public static List<Album> GetAll()
@@ -34,9 +36,19 @@ namespace MusicOrganizer.Models
       _currentId = 0;
     }
 
+    public static void ClearDictionary()
+    {
+      _idDictionary.Clear();
+    }
+
     public static void DeleteAlbum(Album albumName)
     {
       _albumList.Remove(albumName);
+    }
+
+    public static Album FindAlbum(int id)
+    {
+      return _idDictionary[id];
     }
   }
 }

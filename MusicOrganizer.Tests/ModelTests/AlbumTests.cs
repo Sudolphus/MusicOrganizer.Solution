@@ -12,6 +12,7 @@ namespace MusicOrganizer.Tests
     {
       Album.ClearAll();
       Album.ClearCurrentId();
+      Album.ClearDictionary();
     }
 
     [TestMethod]
@@ -52,7 +53,7 @@ namespace MusicOrganizer.Tests
       Album newAlbum = new Album("Doolittle", "The Pixies");
       string testString = "Doolittle";
       Assert.AreEqual(typeof(Album), Album.FindAlbum(0).GetType());
-      Assert.AreEqual(testString, Artist.FindAlbum(0).AlbumName);
+      Assert.AreEqual(testString, Album.FindAlbum(0).AlbumName);
     }
   }
 }

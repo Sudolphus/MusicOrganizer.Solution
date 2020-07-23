@@ -39,10 +39,10 @@ namespace MusicOrganizer.Tests
     }
 
     [TestMethod]
-    public void AlbumId_ArtistObjectsHaveIdField_int()
+    public void AlbumId_AlbumObjectsHaveIdField_int()
     {
-      Artist newArtist = new Artist("Paul Simon");
-      Assert.AreEqual(0, newArtist.Id);
+      Album newAlbum = new Album("Disintegration", "The Cure");
+      Assert.AreEqual(0, newAlbum.Id);
     }
   }
 }

@@ -6,7 +6,15 @@
     <link rel="stylesheet" href="~/css/styles.css" type="text/css">
   </head>
   <body>
-    @RenderBody()
-    @Html.Partial("_Sidebar")
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2">
+          @Html.Partial("_Sidebar")
+        </div>
+        <div class="col-md-10">
+          @RenderBody()
+        </div>
+      </div>
+    </div>
   </body>
 </html>

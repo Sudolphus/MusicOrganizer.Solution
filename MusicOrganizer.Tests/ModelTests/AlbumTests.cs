@@ -1,17 +1,17 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MusicOrganizer.Models;
 using System.Collections.Generic;
-// using System;
+using System;
 
 namespace MusicOrganizer.Tests
 {
   [TestClass]
-  public class AlbumTest
+  public class AlbumTest : IDisposable
   {
-    // public void Dispose()
-    // {
-    //   Category.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Album.ClearAll();
+    }
 
     [TestMethod]
     public void AlbumConstructor_CanCreateAlbumObjects_MatchType()
@@ -20,6 +20,14 @@ namespace MusicOrganizer.Tests
       Assert.AreEqual(typeof(Album), newAlbum.GetType());
       Assert.AreEqual("Graceland", newAlbum.AlbumName);
       Assert.AreEqual("Paul Simon", newAlbum.ArtistName);
+    }
+
+    [TestMethod]
+    public void AlbumList_AlbumsAreAddedToList_ListAdd()
+    {
+      Album newAlbum = new Album("OK Computer", "Radiohead");
+      List<Album> expectedList = new List<Album> { newAlbum };
+      CollectionAssert.AreEqual(expectedList, Album.GetAll());
     }
   }
 }

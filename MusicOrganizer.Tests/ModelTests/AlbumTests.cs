@@ -29,5 +29,13 @@ namespace MusicOrganizer.Tests
       List<Album> expectedList = new List<Album> { newAlbum };
       CollectionAssert.AreEqual(expectedList, Album.GetAll());
     }
+
+    [TestMethod]
+    public void DeleteAlbum_AlbumsCanBeDeleted_Deleted()
+    {
+      Album newAlbum = new Album("OK Computer", "Radiohead");
+      Album.DeleteAlbum(newAlbum);
+      CollectionAssert.DoesNotContain(Album.GetAll(), newAlbum);
+    }
   }
 }

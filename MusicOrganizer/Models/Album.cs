@@ -25,5 +25,9 @@ namespace MusicOrganizer.Models
       _albumList.Clear();
     }
 
+    public static void DeleteAlbum(Album albumName)
+    {
+      _albumList.Remove(albumName);
+    }
   }
 }

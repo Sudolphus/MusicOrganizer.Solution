@@ -7,11 +7,15 @@ namespace MusicOrganizer.Models
     public string ArtistName { get; set; }
     private List<Album> _albumList = new List<Album>();
     private static List<Artist> _artistList = new List<Artist>();
+    public int Id { get ;}
+    private static int _currentId = 0;
 
     public Artist(string artistName)
     {
       ArtistName = artistName;
       _artistList.Add(this);
+      Id = _currentId;
+      _currentId ++;
     }
 
     public void AddAlbum(Album albumName)
@@ -32,6 +36,11 @@ namespace MusicOrganizer.Models
     public static void ClearAll()
     {
       _artistList.Clear();
+    }
+
+    public static void ClearCurrentId()
+    {
+      _currentId = 0;
     }
 
     public void DeleteAlbum(Album albumName)

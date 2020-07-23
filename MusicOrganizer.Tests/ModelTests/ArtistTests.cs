@@ -40,5 +40,15 @@ namespace MusicOrganizer.Tests
       List<Album> _expectedList = new List<Album> { newAlbum1, newAlbum2 };
       CollectionAssert.AreEqual(_expectedList, newArtist.GetAlbums());
     }
+
+    [TestMethod]
+    public void DeleteAlbum_RemoveAnAlbumFromAnArtist_DoesNotContain()
+    {
+      Artist newArtist = new Artist("Paul Simon");
+      Album newAlbum = new Album("Graceland", "Paul Simon");
+      newArtist.AddAlbum(newAlbum);
+      newArtist.DeleteAlbum(newAlbum);
+      CollectionAssert.DoesNotContain(newArtist.GetAlbums(), newAlbum);
+    }
   }
 }
